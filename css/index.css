@@ -9,6 +9,7 @@ footer{
 	border-top: solid 1px #ccc;
 	position: fixed;
 	bottom: 0;
+	background: #fff;
 }
 footer > .footer-item{
 	flex: 1;
@@ -26,7 +27,8 @@ footer > .footer-item > a{
 }
 header,.main{
 	max-width: 6.4rem;
-	margin: 0 auto; 
+	margin: 0 auto;
+	box-sizing: border-box; 
 }
 header{
 	background: #ef1313;
@@ -51,4 +53,159 @@ header > .header-form > input{
 header > .header-message{
 	margin-left: 15px;
 	color: #fff;
+}
+.main > .banner{
+	height: 2.6rem;
+	width: 100%;
+	background: red;
+	position: relative;
+	overflow: hidden;
+}
+.main > .banner > .inner{
+	position: relative;
+    width: 9999px;
+    left: 0;
+    top: 0;
+}
+.main > .banner > .inner > .innerwraper{
+	width: 6.4rem;
+    float: left;
+}
+.main > .banner > .inner > .innerwraper > img{
+	width: 100%;
+	height: 2.6rem;
+}
+.pagination{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.pagination span{
+    display: inline-block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #9aa499;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination .active{
+    background-color: #fff;
+}
+.main > .content{
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: .1rem;
+	background: #fff;
+}
+.main > .content > .content-item{
+	width: 25%;
+	height: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.main > .content > .content-item > img{
+	width: .7rem;
+	height: .7rem;
+	border-radius: 50%;
+}
+.main > .title{
+	height: .4rem;
+	background: #f0f0f0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .1rem .15rem;
+	box-sizing: border-box;
+	font-weight: 400;
+}
+.main > .title > a:nth-child(1){
+	color: #999;
+}
+.main > .title > a:nth-child(2){
+	color: #c9394a;
+}
+.main > .courseList{
+	width: 100%;
+	padding: 0 .3rem;
+	box-sizing: border-box;
+}
+.main > .courseList > .course{
+	border-bottom: 1px solid #ccc;
+	padding: .3rem 0;
+	position: relative;
+}
+.main > .courseList > .course:last-child{
+	border-bottom: none;
+}
+.main > .courseList > .course > .course-img{
+	float: left;
+	width: 1.6rem;
+	height: 1.2rem;
+}
+.main > .courseList > .course:nth-child(1) .course-img{
+	background: url("http://szimg.mukewang.com/5806de7c00014a3105400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.main > .courseList > .course:nth-child(2) .course-img{
+	background: url("http://szimg.mukewang.com/583e42fb0001e04f05400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.main > .courseList > .course:nth-child(3) .course-img{
+	background: url("http://szimg.mukewang.com/57ec8a820001c60b05400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.main > .courseList > .course:nth-child(4) .course-img{
+	background: url("http://szimg.mukewang.com/576b84c10001b1c005400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.main > .courseList > .course > .course-info{
+	margin-left: 1.75rem;
+	margin-right: 1.5rem;
+}
+.main > .courseList > .course > .course-info > p:nth-child(1){
+	font-size: .18rem;
+}
+.main > .courseList > .course > .course-info > p:nth-child(2){
+	font-size: .14rem;
+	color: #999;
+}
+.main > .courseList > .course > .course-info > p:nth-child(3){
+	font-size: .14rem;
+	color: #999;
+}
+.main > .courseList > .course > .course-info > p:nth-child(3) i{
+	color: #33b433;
+	margin-right: 0.05rem;
+}
+.main > .courseList > .course > .course-info > p:nth-child(4) i{
+	margin-right: 0.05rem;
+}
+.main > .courseList > .course > .course-info > p:nth-child(4){
+	font-size: .14rem;
+	color: #999;
+}
+.main > .courseList > .course > .course-info > p:nth-child(5){
+	font-size: .14rem;
+	color: #999;
+}
+.main > .courseList > .course > .course-price{
+	position: absolute;
+	top: 30%;
+	right: .5rem;
+	color:#c9394a;
+}
+.main > .courseList > .course > .course-price > span{
+	font-size: .6rem;
+}
+.main > .courseList > .course > .course-price > em{
+	font-style: normal;
+}
+.main::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 60px;
 }

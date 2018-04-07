@@ -17,3 +17,50 @@
     doc.addEventListener('DOMContentLoaded', recalc, false);
     recalc();
 })(document, window);
+
+$(function(){
+    //banner切换
+    var innerGroup = $(".innerwraper");
+    var spanGroup = $(".pagination span");
+    var imgWidth = $(".innerwraper").find('img').eq(0).width();
+    var _index = 0;
+    var timer = null;//切换定时器
+    spanGroup.on("click", function() {
+        //导航切换
+        _index = spanGroup.index($(this));
+        selectPic(_index);
+        clearInterval(timer);
+    })
+
+    function autoGo() {
+        //自动行走
+        timer = setInterval(go, 3000);
+    }
+
+    autoGo();
+
+    function go() {
+        //计时器的函数
+        _index++;
+        selectPic(_index);
+    }
+
+    //切换函数
+    function selectPic(num) {
+        clearInterval(timer);
+        $(".pagination span").eq(num).addClass("active").siblings().removeClass("active");
+        if( num%4 == 0){
+            $(".pagination span").eq(0).addClass("active").siblings().removeClass("active");
+        }
+        $(".inner").animate({
+            left: -num * imgWidth,
+        }, 1000, function() {
+            timer = setInterval(go, 3000);
+            //检查是否到最后一张
+            if (_index == innerGroup.length-1) {
+                _index %= 4;
+                $(".inner").css("left", "0px");
+            }
+        })
+    }
+});
